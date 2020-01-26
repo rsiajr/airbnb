@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/{{ style }}">
-    <title>{{ title }}</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="AirCNC: ravel and Relax!">
+        <meta name="author" content="Reynaldo Sia Jr.">
+        <link rel="stylesheet" href="css/{{ style }}">
+        <script src="https://kit.fontawesome.com/2228eed549.js" crossorigin="anonymous"></script>
+        <!-- Used Roboto font from Google font website -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>{{ title }}</title>
+    </head>
+    <body>
 
-    <header>
-        <h1>{{ headingInfo }}</h1>
-    </header>
+        <header>
+            <div class="navpadding"></div>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Room Listing</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+                <a href="#"><img src="img/Logo.jpg" alt="Website Logo" class="logo"></a>
+         </header>
 
-    {{{ body }}}
+        {{{ body }}}
 
-</body>
+        <div>
+            <p class="nowshowing">&copy; JR Sia | WDDM-F19 Section A, 2019</p>
+        </div>
+        <article class="footerfinal">
+        <nav aria-label="Legal">
+            <ul class="footertext">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </nav>
+        <div>
+            <ul class="footericons">
+                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f footpad"></i></a></li>
+                <li><a href="#" title="Instagram"><i class="fab fa-instagram footpad"></i></a></li>
+                <li><a href="#" title="Twitter"><i class="fab fa-twitter footpad"></i></a></li>
+                <li><a href="#" title="Pinterest"><i class="fab fa-pinterest footpad"></i></a></li>
+                <li><a href="#" title="Reddit"><i class="fab fa-reddit footpad"></i></a></li>
+            </ul>
+        </div>
+        </article>
+    </body>
 </html>

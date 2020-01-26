@@ -6,6 +6,9 @@ const exphbs = require('express-handlebars');
 //Invoke express
 
 const app = express(); 
+
+//To customize CSS per handlebar
+
 app.use(express.static('public'));
 
 //Create engines
@@ -21,7 +24,6 @@ app.get('/', function (req, res) {
     res.render('home',{
 
         title: "Home",
-        headingInfo : "Home Page",
         style: "home.css"
 
     }); 
@@ -33,7 +35,6 @@ app.get('/reg', function (req, res) {
     res.render('reg',{
 
         title: "Registration",
-        headingInfo : "Registration Page",
         style: "registration.css"
 
     });  
@@ -45,7 +46,6 @@ app.get('/rooms', function (req, res) {
     res.render('roomlisting',{
 
         title: "Rooms",
-        headingInfo : "Room Listing Page",
         style: "listing.css"
 
     }); 

@@ -1,5 +1,44 @@
-body{
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
 
-    background: tomato;
+body {
+    background: whitesmoke;
+}
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-image: url('/img/beach.jpg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1.5em 0;
+    background-color: darkslategray;
+}
+
+.logo {
+    border-radius: 6em;
+}
+
+.nav {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.navpadding{
+    padding: 0 2em;
 }
