@@ -1,2 +1,96 @@
-    <h1> Hello world! </h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, itaque fugit! Nemo explicabo quod adipisci nulla at nobis laborum harum quia, facilis esse qui voluptatibus, beatae praesentium ad suscipit! Nostrum!</p>
+<form id="salcalc"><br><br><br>
+        <div class="personal">
+            <section>
+                <label>Employee #: </label>
+                <input type="text" id="empnumber" class="empnum" maxlength="6">
+            </section>
+            <section>
+                <label>Name: </label>
+                <input type="text" id="empname" class="empnam" maxlength="40">
+            </section>
+        </div><br>
+        <div class="borderline"></div><br>
+        <div class="jobpayinfo">
+            <section>
+                <label>Department: </label><br>
+                <select id="department">
+                    <option value="noneone"> </option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Humanities">Humanities</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Social Sciences">Social Sciences</option>
+                </select>
+            </section>
+            <section>
+                <label>Employee Type: </label><br>
+                <select id="emptype">
+                    <option value="nonethree"> </option>
+                    <option value="Faculty">F - Faculty</option>
+                    <option value="Regular">R - Regular</option>
+                </select>
+            </section>
+            <section>
+                <label>Month of Pay: </label><br>
+                <select id="month">
+                    <option value="nonetwo"> </option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+            </section>
+        </div><br>
+        <div class="borderline"></div><br>
+        <div class="jobpayinfo">
+            <section>
+                <label>Hours worked (in a given month): </label><br>
+                <input type="text" id="hours" class="hrs" maxlength="6">
+            </section>
+            <section id="typeofemployee"></section>
+            <section>
+                <label>Gross Salary: </label><br>
+                <input type="text" id="gross" class="grosssal" disabled="disabled">
+            </section><br>
+        </div>
+        <div class="borderline"></div><br>
+        <div class="deductions">
+            <section>
+                <label>Canadian Income Tax Rate:</label><br>
+                <input type="text" id="taxrate" value="25%" class="tax" disabled="disabled">
+            </section>
+            <section>
+                <label>Tax Due:</label><br>
+                <input type="text" id="taxdue" class="tdue" disabled="disabled"><br>
+            </section>
+            <section>
+                <label>Health Surcharge Fee: </label><br>
+                <input type="text" id="healthfee" value="" class="health" disabled="disabled"><br></br>  
+            </section>
+        </div>
+        <div class="borderline"></div><br>
+        <div class="paysec">
+            <section>
+                <label>Net Pay: </label><br>
+                <input type="text" id="netpayment" value="" class="net" disabled="disabled">
+            </section>
+            <section class="textleft">
+                <label>Total Deductions: </label><br>
+                <input type="text" id="netded" value="" class="ded" disabled="disabled">
+            </section>
+        </div><br><br>
+            <section class="jobpayinfo">
+                <input type="button" id="calculate" value="Calculate Net Pay" class="calc">
+                <input type="button" id="cancel" value="Clear All" class="cancelme">
+                <input type="button" id="print" value="Print Payslip" class="printpay"><br><br>
+            </section>
+    </form>
