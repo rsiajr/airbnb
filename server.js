@@ -1,12 +1,19 @@
-const express = require('express'); 
+//Require Express and Handlebars
 
+const express = require('express'); 
 const exphbs = require('express-handlebars'); 
+
+//Invoke express
 
 const app = express(); 
 
-app.engine('handlebars', exphbs()); 
+//Create engines
 
+app.engine('handlebars', exphbs()); 
 app.set('view engine', 'handlebars'); 
+app.use(express.static('public')); 
+
+//Request and Response
 
 app.get('/', function (req, res) { 
 
@@ -16,4 +23,27 @@ app.get('/', function (req, res) {
 
 }); 
 
-app.listen(3000); 
+app.get('/reg', function (req, res) { 
+
+    res.render('reg'); 
+
+    res.send("Registration Page"); 
+
+}); 
+
+app.get('/rooms', function (req, res) { 
+
+    res.render('roomlisting'); 
+
+    res.send("Rooms Listing Page"); 
+
+}); 
+
+
+//Port creation
+
+const PORT=3000;
+
+app.listen(PORT,()=>{
+    console.log(`Web Server Started`);
+});
