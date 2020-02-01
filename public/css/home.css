@@ -74,6 +74,11 @@ header {
     text-align: center;
 }
 
+.Testing{
+
+    color: white;
+}
+
 .footericons{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
