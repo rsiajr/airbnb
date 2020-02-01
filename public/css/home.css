@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing:border-box;
@@ -57,7 +57,7 @@ header {
 
 .nav-li-padding{
     padding: 0 .7em;
-}
+} */
 
 .fillform{
     padding: 1% 2% 2% 2%;
@@ -102,7 +102,7 @@ input:focus{
     outline: none;
 }
 
-.copyright{
+/* .copyright{
     padding: 1em 0;
     font-size: large;
     color: darkcyan;
@@ -124,7 +124,7 @@ input:focus{
     padding: 0;  
     font-size: .8rem;
     background-color: cyan;
-}
+} */
 
 .promophoto{
     height: 100%;

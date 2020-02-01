@@ -52,6 +52,17 @@ app.get('/rooms', function (req, res) {
 
 }); 
 
+app.get('/', function (req, res) { 
+
+    res.render('main',{
+
+        title: "Main",
+        style: "main.css"
+
+    }); 
+
+}); 
+
 //Port creation
 
 const PORT=3000;
