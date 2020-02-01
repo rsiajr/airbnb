@@ -128,7 +128,7 @@ input{
 }
 
 input:focus{
-    outline: none;
+    outline: turquoise;
 }
 
 .promophoto{
@@ -178,3 +178,39 @@ input:focus{
 
 
 /* Registration Page CSS */
+
+h3{
+    font-size: .8rem;
+    color: gray;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.mainregsec{
+    padding-top: 5%;
+}
+
+.regform{
+    margin: 2% 2%;
+}
+
+.bdayclause{
+    font-size: .6rem;
+    color: gray;
+    margin-left: 2%;
+}
+
+.marketingclause{
+    font-size: .6rem;
+    color: gray;
+    margin: 5% 2%;
+}
+
+.signup{
+    border-radius: .3em;
+    margin: 0 15%;
+    font-size: 1rem;
+    padding: 1em 5em;
+    color: white;
+    background-color: turquoise;
+}
