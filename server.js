@@ -21,10 +21,19 @@ app.use(express.static('public'));
 
 app.get('/', function (req, res) { 
 
+    res.render('main',{
+
+        title: "Main",
+
+    }); 
+
+}); 
+
+app.get('/home', function (req, res) { 
+
     res.render('home',{
 
         title: "Home",
-        style: "home.css"
 
     }); 
 
@@ -35,7 +44,6 @@ app.get('/reg', function (req, res) {
     res.render('reg',{
 
         title: "Registration",
-        style: "registration.css"
 
     });  
 
@@ -46,18 +54,16 @@ app.get('/rooms', function (req, res) {
     res.render('roomlisting',{
 
         title: "Rooms",
-        style: "listing.css"
 
     }); 
 
-}); 
+});     
 
-app.get('/', function (req, res) { 
+app.get('/login', function (req, res) { 
 
-    res.render('main',{
+    res.render('login',{
 
-        title: "Main",
-        style: "main.css"
+        title: "Login",
 
     }); 
 
