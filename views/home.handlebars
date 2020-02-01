@@ -1,67 +1,46 @@
 <article class="seetheworld">
     Book your next trip now!
 </article>
-<div class="formcaption">Where</div>
-<form id="fillform">
-        <div class="personal">
-            <section>
-                <label>Employee #: </label>
-                <input type="text" id="empnumber" class="empnum" maxlength="6">
-            </section>
-            <section>
-                <label>Name: </label>
-                <input type="text" id="empname" class="empnam" maxlength="40">
-            </section>
-        </div><br>
-        <div class="borderline"></div>
-        <div class="jobpayinfo">
-            <section>
-                <label>Department: </label><br>
-                <select id="department">
-                    <option value="noneone"> </option>
-                    <option value="Accounting">Accounting</option>
-                    <option value="Engineering">Engineering</option>
-                    <option value="Humanities">Humanities</option>
-                    <option value="IT">Information Technology</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Social Sciences">Social Sciences</option>
-                </select>
-            </section>
-            <section>
-                <label>Employee Type: </label>
-                <select id="emptype">
-                    <option value="nonethree"> </option>
-                    <option value="Faculty">F - Faculty</option>
-                    <option value="Regular">R - Regular</option>
-                </select>
-            </section>
-            <section>
-                <label>Month of Pay: </label><br>
-                <select id="month">
-                    <option value="nonetwo"> </option>
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                </select>
-            </section>
-        </div><br>
-        <div class="borderline"></div>
-        <div class="jobpayinfo">
-            <section>
-                <label>Hours worked (in a given month): </label><br>
-                <input type="text" id="hours" class="hrs" maxlength="6">
-            </section><br>
-        </div>
-    </form>
+<form class="fillform">
+    <div class="formcaption">Where</div>
+    <div class="personal">
+        <section>
+            <select class="dropdown" id="whereto">
+                <option value="noneone"> </option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="Newbrun">New Brunswick</option>
+                <option value="Newlab">Newfoundland and Labrador</option>
+                <option value="Nova">Nova Scotia</option>
+                <option value="Ontario">Ontario</option>
+                <option value="PEI">Prince Edward Island</option>
+                <option value="Quebec">Quebec</option>
+                <option value="Sas">Saskatchewan</option>
+            </select>
+        </section>
+        <div class="formcaption">Check-in</div>
+        <section>
+            <input type="date" id="startdate" class="startdate" placeholder="Start date">
+        </section>
+        <div class="formcaption">Check-out</div>
+        <section>
+            <input type="date" id="endate" class="enddate" placeholder="Start date">
+        </section>
+        <div class="formcaptiontwo">Guests</div>
+        <section>
+            <select class="dropdown" id="guests">
+                <option value="noneone"> </option>
+                <option value="one">One</option>
+                <option value="two">two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+                <option value="six">Six or more</option>
+            </select>
+        </section>
+    </div><br>
+</form>
     <article>
         <section class="whatis">
             What is AirBNB and how does it work?
