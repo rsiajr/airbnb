@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
     font-family: 'Roboto', Helvetica, sans-serif;
 }
 
@@ -61,7 +62,7 @@ header {
 .copyright{
     padding: 1em 0;
     font-size: large;
-    color: goldenrod;
+    color: darkcyan;
     text-align: center;
 }
 
@@ -92,7 +93,8 @@ header {
 
 .whatis{
     background-color: darkcyan;
-    padding: 5%; 
+    padding: 3% 0; 
+    text-align: center;
     color: whitesmoke;
 }
 
@@ -106,6 +108,21 @@ header {
     text-align: center;
     background-color: papayawhip;
     color: gray;
+}
+
+.seetheworld{
+    padding: 3% 0;
+    margin-bottom: 2%;
+    background-color: darkcyan;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.experience{
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: darkcyan;
+    /* box-shadow: 5px 10px #888888; */
 }
 
 .youtube{

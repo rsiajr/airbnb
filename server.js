@@ -52,7 +52,6 @@ app.get('/rooms', function (req, res) {
 
 }); 
 
-
 //Port creation
 
 const PORT=3000;
@@ -60,3 +59,4 @@ const PORT=3000;
 app.listen(PORT,()=>{
     console.log(`Web Server Started`);
 });
+
