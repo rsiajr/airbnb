@@ -236,3 +236,59 @@ h3{
     color: white;
     background-color: turquoise;
 }
+
+/* Room Listing Page CSS */
+
+.search{
+    margin: 5%;
+    padding: 3%;
+    background-color: turquoise;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: .3em;
+}
+
+.partition{
+    border-style: solid;
+    border-width: thin;
+    border-top-color: darkcyan;
+    border-bottom-color: white;
+    border-right-color: white;
+    border-left-color: white;
+    margin: 10% 0;
+}
+
+.product{
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productsbox{
+    margin: 2% 23%;
+    box-sizing: border-box;
+    border-style: ridge;
+    border-color: lightgray;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 10px 11px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 10px 11px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 11px rgba(0, 0, 0, 0.12);
+    height: 50%;
+    width: 50%;     
+}
+
+.prodtitle{
+    margin-top: 7%;
+    text-align: center;
+    color: darkcyan;
+}
+
+.prodprice{
+    margin-top: 3%;
+    text-align: center;
+    color: darkgreen;
+}
