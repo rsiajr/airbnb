@@ -190,6 +190,14 @@ h3{
     padding-top: 5%;
 }
 
+.regline{
+    border-style: solid;
+    border-width: thin;
+    margin-bottom: 3%;
+    border-color: whitesmoke;
+    border-top-color: gray;
+}
+
 .regform{
     margin: 2% 2%;
 }
