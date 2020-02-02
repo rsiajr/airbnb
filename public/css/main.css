@@ -477,7 +477,7 @@ h3{
     }
 
     .whatis{
-        margin-top: 5%;
+        margin-top: 1%;
     }
 
     .fillform{
@@ -493,7 +493,8 @@ h3{
     }
 
     .youtube{
-        padding-right: 10%;
+        margin-left: 5%;
+        padding-right: 0;
         padding-top: 3%;
         width: 400px;
         height: 400px;
