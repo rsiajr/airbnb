@@ -1,65 +1,70 @@
+<div class="gridmid">
+    <section>
+        <article class="seetheworld">
+        Book your next trip now!
+        </article>
+        <form class="fillform">
+            <div class="formcaption">Where</div>
+            <div class="personal">
+                <section>
+                    <select class="dropdown" id="whereto">
+                        <option value="noneone"> </option>
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="Manitoba">Manitoba</option>
+                        <option value="Newbrun">New Brunswick</option>
+                        <option value="Newlab">Newfoundland and Labrador</option>
+                        <option value="Nova">Nova Scotia</option>
+                        <option value="Ontario">Ontario</option>
+                        <option value="PEI">Prince Edward Island</option>
+                        <option value="Quebec">Quebec</option>
+                        <option value="Sas">Saskatchewan</option>
+                    </select>
+                </section>
+                <div class="formcaption">Check-in</div>
+                <section>
+                    <input type="date" id="startdate" class="startdate">
+                </section>
+                <div class="formcaption">Check-out</div>
+                <section>
+                    <input type="date" id="endate" class="enddate">
+                </section>
+                <div class="formcaptiontwo">Guests</div>
+                <section>
+                    <select class="dropdown" id="guests">
+                        <option value="noneone"> </option>
+                        <option value="one">One</option>
+                        <option value="two">two</option>
+                        <option value="three">Three</option>
+                        <option value="four">Four</option>
+                        <option value="five">Five</option>
+                        <option value="six">Six or more</option>
+                    </select>
+                </section>
+            </div><br>
+        </form>
+    </section>
+    <section>
+        <article>
+            <section class="whatis">
+                What is AirBNB and how does it work?
+            </section>
+            <section class="answhatis">
+                <div>It's a  community built on sharing! 
+                </div><br>
+                <div>Airbnb began in 2008 when two designers who had space to share hosted three travellers looking for a place to stay. 
+                </div><br>
+                <div>
+                Now, millions of hosts and travellers choose to create a free Airbnb account so they can list their space and book unique accommodations anywhere in the world. And Airbnb experience hosts share their passions and interests with both travellers and locals.
+                </div>
+            </section>
+        </article>
+    </section>
+</div><br>
 <article class="seetheworld">
-    Book your next trip now!
+    Experience the world with AirBNB!
 </article>
-<form class="fillform">
-    <div class="formcaption">Where</div>
-    <div class="personal">
-        <section>
-            <select class="dropdown" id="whereto">
-                <option value="noneone"> </option>
-                <option value="AB">Alberta</option>
-                <option value="BC">British Columbia</option>
-                <option value="Manitoba">Manitoba</option>
-                <option value="Newbrun">New Brunswick</option>
-                <option value="Newlab">Newfoundland and Labrador</option>
-                <option value="Nova">Nova Scotia</option>
-                <option value="Ontario">Ontario</option>
-                <option value="PEI">Prince Edward Island</option>
-                <option value="Quebec">Quebec</option>
-                <option value="Sas">Saskatchewan</option>
-            </select>
-        </section>
-        <div class="formcaption">Check-in</div>
-        <section>
-            <input type="date" id="startdate" class="startdate">
-        </section>
-        <div class="formcaption">Check-out</div>
-        <section>
-            <input type="date" id="endate" class="enddate">
-        </section>
-        <div class="formcaptiontwo">Guests</div>
-        <section>
-            <select class="dropdown" id="guests">
-                <option value="noneone"> </option>
-                <option value="one">One</option>
-                <option value="two">two</option>
-                <option value="three">Three</option>
-                <option value="four">Four</option>
-                <option value="five">Five</option>
-                <option value="six">Six or more</option>
-            </select>
-        </section>
-    </div><br>
-</form>
-    <article>
-        <section class="whatis">
-            What is AirBNB and how does it work?
-        </section>
-        <section class="answhatis">
-            <div>It's a  community built on sharing! 
-            </div><br>
-            <div>Airbnb began in 2008 when two designers who had space to share hosted three travellers looking for a place to stay. 
-            </div><br>
-            <div>
-            Now, millions of hosts and travellers choose to create a free Airbnb account so they can list their space and book unique accommodations anywhere in the world. And Airbnb experience hosts share their passions and interests with both travellers and locals.
-            </div>
-        </section>
-    </article><br>
-    <article class="seetheworld">
-        Experience the world with AirBNB!
-    </article>
-
-<div>
+<div class="samplepics">
 {{#each home }}
 
     <div>
@@ -68,16 +73,21 @@
 
 {{/each}}  
 </div>
-
-<article class="seetheworld">
+<div class="bottomgrid">
+    <section>
+        <article class="seetheworld">
     See how are partners are earning!
-</article>
-<article>
-    <iframe width="320" height="250" src="https://www.youtube.com/embed/-So2IUIHHe0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube"></iframe>
-</article>
-<article class="seetheworld">
-    Grab this promo now!
-</article>
-<article>
-    <a href="#"><img src="img/canva.png" alt="promotion" class="promophoto"></a>
-</article>
+        </article>
+        <article>
+            <iframe src="https://www.youtube.com/embed/-So2IUIHHe0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube"></iframe>
+        </article>
+    </section>
+    <section>
+        <article class="seetheworld">
+            Grab this promo now!
+        </article>
+        <article>
+            <a href="#"><img src="img/canva.png" alt="promotion" class="promophoto"></a>
+        </article>
+    </section>
+</div>

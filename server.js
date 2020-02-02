@@ -43,6 +43,8 @@ app.get('/home', function (req, res) {
 
     sampleDB.push({img:'img/carousel-5.jpg',title:'Spacious living room'});
 
+    sampleDB.push({img:'img/carousel-6.jpg',title:'House on hill'});
+
     res.render("home",{
         title: "Home",
         headingInfo : "Home Page",

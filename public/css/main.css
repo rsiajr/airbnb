@@ -295,6 +295,7 @@ h3{
 
 /* -----------------Media Queries--------------------*/
 
+/* HOME PAGE MEDIA QUERIES */
 
 @media only screen and (min-width: 360px) {
 
@@ -307,7 +308,9 @@ h3{
     }
     
     .youtube{
-        margin: 0 5%;
+        padding: 1% 5%;
+        width: 360px;
+        height: 280px;
     }
 
 }
@@ -329,7 +332,10 @@ h3{
     }
 
     .youtube{
-        margin: 0 15%;
+        padding: 1% 0;
+        margin: 0 5%;
+        width: 420px;
+        height: 280px;
     }
 
     .footericons{
@@ -373,7 +379,10 @@ h3{
     }
 
     .youtube{
-        margin: 3% 25%;
+        padding: 1% 0;
+        margin: 0;
+        width: 600px;
+        height: 400px;
     }
 
     .footericons{
@@ -388,4 +397,127 @@ h3{
         font-size: 2rem;
     }
 
+    .samplepics{
+        display: grid;
+        padding: 1% 2%;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
+
+@media only screen and (min-width: 768px) {
+
+    .fillform{
+        padding: 1% 35%;
+        font-size: 1.5rem;
+    }
+
+    .formcaption{
+        font-size: 1.5rem;
+    }
+
+    .formcaptiontwo{
+        font-size: 1.5rem;
+    }
+    
+    .answhatis{
+        font-size: 1.5rem;
+    }
+
+    .youtube{
+        margin: 0;
+        padding-left: 10%;
+        padding-top: 1%;
+        width: 360px;
+        height: 280px;
+    }
+
+    .footericons{
+        font-size: 1.5rem;
+    }
+
+    .seetheworld {
+        font-size: 1.5rem;
+    }
+
+    .whatis{
+        font-size: 1.5rem;
+    }
+
+    .bottomgrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: lightgray;
+    }
+
+    .promophoto{
+        padding: 3% 0; 
+        text-align: center;
+    }
+
+    .footertext{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    .nav{
+        font-size: 1.5rem;
+    }
+
+    .seetheworld{
+        margin-top: 5%;
+    }
+
+    .gridmid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: lightgray;
+        margin-top: 2%;
+    }
+
+    .whatis{
+        margin-top: 5%;
+    }
+
+    .fillform{
+        padding: 1% 25%;
+    }
+
+    .formcaption{
+        color: darkcyan;
+    }
+
+    .formcaptiontwo{
+        color: darkcyan;
+    }
+
+    .youtube{
+        padding-right: 10%;
+        padding-top: 3%;
+        width: 400px;
+        height: 400px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .samplepics{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .youtube{
+        padding-left: 0%;
+        padding-top: 3%;
+        max-width: 1500px;
+        width: 500px;
+        height: 400px;
+    }
+}
+
+/* Login Page Media Queries */
+
