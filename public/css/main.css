@@ -297,7 +297,7 @@ h3{
 
 /* HOME PAGE MEDIA QUERIES */
 
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 22.5em) {
 
     .nav {
         display: grid;
@@ -315,7 +315,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 470px) {
+@media only screen and (min-width: 29.375em) {
 
     .nav {
         display: inline;
@@ -344,7 +344,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
 
     header {
         display: inline-block;
@@ -405,7 +405,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
 
     .fillform{
         padding: 1% 35%;
@@ -463,7 +463,7 @@ h3{
 }
 
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 62em) {
 
     .nav{
         font-size: 1.5rem;
@@ -501,7 +501,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 62em) {
 
     .samplepics{
         grid-template-columns: 1fr 1fr 1fr;
@@ -518,7 +518,7 @@ h3{
 
 /* Login Page Media Queries */
 
-@media only screen and (min-width: 470px) {
+@media only screen and (min-width: 29.375em) {
 
     .regform{
         margin: 2% 25%;
@@ -530,7 +530,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
 
     .regform{
         font-size: 1.5rem;
@@ -542,7 +542,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
 
     .loginheader{
         font-size: 2rem;
@@ -552,7 +552,7 @@ h3{
 
 /* Registration Page Media Queries */
 
-@media only screen and (min-width: 470px) {
+@media only screen and (min-width: 29.375em) {
 
     h1{
         margin: 0 25%;
@@ -582,7 +582,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
 
     .formcaption{
         font-size: 1.5rem;
@@ -598,7 +598,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
 
     .signup{
         font-size: 1.7rem;
@@ -607,7 +607,7 @@ h3{
 }
 
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 62em) {
 
     .formcaption{
         color: gray;
@@ -624,7 +624,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 62em) {
 
     h3{
         font-size: 1.5rem;
@@ -634,7 +634,7 @@ h3{
 
 /* Rooms Listing Page Media Queries */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
 
     .search{
         font-size: 1.5rem;
@@ -642,7 +642,7 @@ h3{
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
 
     .roomgrid{
         display: grid;
@@ -652,7 +652,7 @@ h3{
 }
 
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 62em) {
 
     .roomgrid{
         display: grid;
