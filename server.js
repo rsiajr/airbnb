@@ -90,7 +90,7 @@ app.get("/rooms",(req,res)=>{
 
     const prodDB= [];
 
-    prodDB.push({img:'img/forrent-1.jpg',title:'Room for rent', desc:'Sun-filled spacious single-bedroom room for rent', rate:`649.99`});
+    prodDB.push({img:'img/forrent-1.jpg',title:'Room for rent', desc:'Sunny bedroom room for rent', rate:`649.99`});
 
     prodDB.push({img:'img/forrent-2.jpg',title:'House for rent',desc:'Tuscan-inspired house for rent',rate:`749.99`});
 

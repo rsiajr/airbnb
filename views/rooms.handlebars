@@ -1,13 +1,14 @@
 <h1 class="search">Search Results</h1>
 
-{{#each rooms }}
+<div class="roomgrid">
 
-<div class="partition"></div>
+{{#each rooms }}
     <article class="productsbox">
         <img src="{{ this.img }}" alt="{{ this.title }}" class="product">
+        <h2 class="prodtitle" id="prodtitle">{{ this.desc }}</h2>
+        <p class="prodprice" id="prodprice">Price per night: <ins class="insprice">${{ this.rate }}</ins></p>
     </article>
-    <h2 class="prodtitle" id="prodtitle">{{ this.desc }}</h2>
-    <p class="prodprice" id="prodprice">Price per night: <ins class="insprice">${{ this.rate }}</ins></p>
-
 {{/each}}
+
+</div>
 

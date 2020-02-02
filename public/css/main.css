@@ -262,7 +262,7 @@ h3{
 .product{
     height: 100%;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -631,3 +631,34 @@ h3{
     }
 
 }
+
+/* Rooms Listing Page Media Queries */
+
+@media only screen and (min-width: 600px) {
+
+    .search{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .roomgrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    .roomgrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+}
+
