@@ -212,7 +212,7 @@ h3{
     font-size: 1rem;
     padding: 1em 5em;
     color: white;
-    background-color: tomato;
+    background-color: indianred;
 }
 
 /* Login Page CSS */
@@ -234,7 +234,7 @@ h3{
     font-weight: lighter;
     padding: 1em 5em;
     color: white;
-    background-color: turquoise;
+    background-color: indianred;
 }
 
 /* Room Listing Page CSS */
@@ -472,7 +472,7 @@ h3{
     .gridmid{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background-color: lightgray;
+        background-color: whitesmoke;
         margin-top: 2%;
     }
 
@@ -515,6 +515,51 @@ h3{
         width: 500px;
         height: 400px;
     }
+}
+
+@media only screen and (min-width: 75em) {
+
+    .footertext{
+        font-size: 2rem;
+    }
+
+    .footericons{
+        font-size: 2rem;
+    }
+
+    .youtube{
+        margin-left: 20%;
+    }
+
+    .promophoto{
+        padding-right: 7%;
+    }
+
+    .seetheworld{
+        font-size: 2rem;
+    }
+
+    .whatis{
+        font-size: 2rem;
+    }
+
+    .answhatis{
+        margin-top: 3%;
+        margin-right: 3%;
+    }
+
+    .copyright{
+        font-size: 1.5rem;
+    }
+
+    .partition{
+        margin: 1% 0;
+    }
+
+    .nav{
+        font-size: 2rem;
+    }
+
 }
 
 /* Login Page Media Queries */
@@ -623,12 +668,16 @@ h3{
         font-size: 1.5rem;
     }
 
-}
-
-@media only screen and (min-width: 62em) {
-
     h3{
         font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 75em) {
+
+    .signup{
+        margin: 2% 40%;
     }
 
 }
@@ -659,6 +708,14 @@ h3{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+}
+
+@media only screen and (min-width: 75em) {
+
+    .search{
+        font-size: 2.5rem;
     }
 
 }
