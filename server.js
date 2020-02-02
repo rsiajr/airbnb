@@ -31,12 +31,24 @@ app.get('/', function (req, res) {
 
 app.get('/home', function (req, res) { 
 
-    res.render('home',{
+    const sampleDB= [];
 
+    sampleDB.push({img:'img/carousel-1.jpg',title:'Room in house'});
+
+    sampleDB.push({img:'img/carousel-2.jpg',title:'Hammock in garden'});
+
+    sampleDB.push({img:'img/carousel-3.jpg',title:'Small house'});
+
+    sampleDB.push({img:'img/carousel-4.jpg',title:'Big house'});
+
+    sampleDB.push({img:'img/carousel-5.jpg',title:'Spacious living room'});
+
+    res.render("home",{
         title: "Home",
-        headingInfo : "Home Page"
+        headingInfo : "Home Page",
+        home : sampleDB
 
-    }); 
+    });
 
 }); 
 

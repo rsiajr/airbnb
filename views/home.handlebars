@@ -58,22 +58,17 @@
     <article class="seetheworld">
         Experience the world with AirBNB!
     </article>
+
 <div>
+{{#each home }}
+
     <div>
-        <img src="img/carousel-1.jpg" style="width:100%" class="experience">
+        <img src="{{ this.img }}" style="width:100%" class="experience" alt="{{ this.title }}">
     </div>
-    <div>
-        <img src="img/carousel-2.jpg" style="width:100%" class="experience">
-    </div>
-    <div>
-        <img src="img/carousel-3.jpg" style="width:100%" class="experience">
-    </div>
-    <div>
-        <img src="img/carousel-4.jpg" style="width:100%" class="experience">
-    </div>
-    <div>
-        <img src="img/carousel-5.jpg" style="width:100%" class="experience">
+
+{{/each}}  
 </div>
+
 <article class="seetheworld">
     See how are partners are earning!
 </article>

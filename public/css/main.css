@@ -80,7 +80,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     text-align: center;
-    padding: 0;  
+    padding: 3% 0;  
     font-size: .8rem;
     background-color: cyan;
 }
@@ -291,4 +291,101 @@ h3{
     margin-top: 3%;
     text-align: center;
     color: darkgreen;
+}
+
+/* -----------------Media Queries--------------------*/
+
+
+@media only screen and (min-width: 360px) {
+
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 1% 2%;
+        font-size: 1.2rem;
+    }
+    
+    .youtube{
+        margin: 0 5%;
+    }
+
+}
+
+@media only screen and (min-width: 470px) {
+
+    .nav {
+        display: inline;
+        padding: 7% 2%;
+        font-size: 1.2rem;
+    }
+
+    .fillform{
+        padding: 1% 15%;
+    }
+    
+    .answhatis{
+        font-size: 1rem;
+    }
+
+    .youtube{
+        margin: 0 15%;
+    }
+
+    .footericons{
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    header {
+        display: inline-block;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        padding: 2% 0;
+        background-color: rgb(88, 170, 124);
+    }
+
+    .logo {
+        height: 20%;
+        width: 20%;
+        padding-top: 1%;
+        margin-left: 40%;
+    }
+
+
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 .2%;
+        margin: 0 3%;
+        text-align: center;
+    }
+
+    .fillform{
+        padding: 1% 25%;
+    }
+    
+    .answhatis{
+        font-size: 1rem;
+    }
+
+    .youtube{
+        margin: 3% 25%;
+    }
+
+    .footericons{
+        font-size: 1.5rem;
+    }
+
+    .seetheworld {
+        font-size: 2rem;
+    }
+
+    .whatis{
+        font-size: 2rem;
+    }
+
 }
