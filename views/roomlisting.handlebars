@@ -1,8 +1,10 @@
+{{#each rooms }}
+
 <h1 class="search">Search Results</h1>
 <div class="partition"></div>
     <article class="productsbox">
-        <img src="{{ prodImg }}" alt="{{ prodTitle }}" class="product">
+        <img src="{{ this.prodImg }}" alt="{{ this.title }}" class="product">
     </article>
-    <h2 class="prodtitle" id="prodtitle">{{ prodDesc }}</h2>
-    <p class="prodprice" id="prodprice">Price:<ins class="insprice">{{ rate }}</ins></p>
+    <h2 class="prodtitle" id="prodtitle">{{ this.desc }}</h2>
+    <p class="prodprice" id="prodprice">Price:<ins class="insprice">{{ this.rate }}</ins></p>
 <div class="partition"></div>
