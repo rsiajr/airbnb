@@ -17,7 +17,7 @@ li {
 
 a {
     text-decoration: none;
-    color: darkcyan;
+    color: indianred;
     list-style: none;   
 }
 
@@ -437,6 +437,7 @@ h3{
     }
 
     .seetheworld {
+        margin-top: 1%;
         font-size: 1.5rem;
     }
 
@@ -466,10 +467,6 @@ h3{
 
     .nav{
         font-size: 1.5rem;
-    }
-
-    .seetheworld{
-        margin-top: 5%;
     }
 
     .gridmid{
@@ -521,3 +518,116 @@ h3{
 
 /* Login Page Media Queries */
 
+@media only screen and (min-width: 470px) {
+
+    .regform{
+        margin: 2% 25%;
+    }
+
+    .signin{
+        margin: 5% 25%;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .regform{
+        font-size: 1.5rem;
+    }
+
+    .signin{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .loginheader{
+        font-size: 2rem;
+    }
+
+}
+
+/* Registration Page Media Queries */
+
+@media only screen and (min-width: 470px) {
+
+    h1{
+        margin: 0 25%;
+        color: gray;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .proxy{
+        margin: 0 15%;
+        font-size: 1rem;
+    }
+
+    .signup{
+        margin: 0 25%;
+    }
+
+    .bdayclause{
+        font-size: .7rem;
+    }
+
+    .marketingclause{
+        font-size: .7rem;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .formcaption{
+        font-size: 1.5rem;
+    }
+
+    .bdayclause{
+        font-size: 1rem;
+    }
+
+    .marketingclause{
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .signup{
+        font-size: 1.7rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    .formcaption{
+        color: gray;
+        font-size: 2rem;
+    }
+
+    .bdayclause{
+        font-size: 1.5rem;
+    }
+
+    .marketingclause{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+}
