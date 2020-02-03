@@ -308,8 +308,7 @@ h3{
 @media only screen and (min-width: 22.5em) {
 
     header {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         height: 100%;
         width: 100%;
         background-size: 100%;
@@ -317,9 +316,8 @@ h3{
     }
     
     .nav {
-        display: inline;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        display: flex;
+        flex-wrap: wrap;
         padding: 1% 0;
         font-size: 1.2rem;
     }
@@ -715,7 +713,7 @@ h3{
 @media only screen and (min-width: 75em) {
 
     .signup{
-        margin: 2% 40%;
+        margin: 2% 35%;
     }
 
 }
