@@ -140,11 +140,16 @@ app.post("/login",(req,res)=>{
 
   }
 
+  if(validator.validate(req.body.email) == false)
+  {
+    errors.push("You need to enter a valid EMAIL ADDRESS.");
+
+  }
+
   if(req.body.password=="")
   {
     errors.push("You need to enter a PASSWORD before you can signin.")
   }
-
 
   if(errors.length > 0)
   {
