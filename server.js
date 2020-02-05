@@ -2,7 +2,21 @@
 
 const express = require('express'); 
 const exphbs = require('express-handlebars'); 
-const bodyParser = require('body-parser') 
+const bodyParser = require('body-parser');
+const passwordValidator = require('password-validator');
+
+//Schema for password-validator
+
+let schema = new passwordValidator();
+ 
+schema
+.is().min(6)
+.is().max(8)
+.has().uppercase()
+.has().lowercase()
+.has().digits()
+.has().not().spaces()
+
 
 //Invoke express
 
@@ -169,6 +183,17 @@ app.post("/reg",(req,res)=>{
     errorsReg.push("You need to enter a PASSWORD before you can signin.")
   }
 
+//   if(req.body.passwordReg.is().min(6) && req.body.passwordReg.is().max(8) && req.body.passwordReg.has().uppercase() && req.body.passwordReg.has().lowercase() && req.body.passwordReg.has().digits() && req.body.passwordReg.has().not().spaces())
+//   {
+//     errorsReg.push("Your password must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and numerical value.")
+//   }
+
+  if(schema.validate(req.body.passwordReg))
+  {
+    errorsReg.push("Your password must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and numerical value.")
+  }
+
+  
 //   if(req.body.dob==mm/dd/yyyy)
 //   {
 //     errorsReg.push("You need to enter a DATE OF BIRTH before you can signin.")
