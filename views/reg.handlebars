@@ -3,26 +3,33 @@
 <article class="mainregsec">
 <div class="regline"></div>
     <h1>Or create new account:</h1>
-    <section>
-        <input type="input" id="email" class="regform" placeholder="Email">
-    </section>
-    <section>
-        <input type="input" id="firstname" class="regform" placeholder="First Name">
-    </section>
-    <section>
-        <input type="input" id="lastname" class="regform" placeholder="Last Name">
-    </section>
-    <section>
-        <input type="input" id="password" class="regform" placeholder="Create a Password">
-    </section>
-<div class="proxy">
-    <div class="formcaption">Date of Birth</div>
-    <p class="bdayclause">To sign up, you need to be atleast 18 years old. Other people who use AirBNB won't see your birthday</p>
-        <input type="date" id="bday" class="regform">
-    </section>
-    <p class="marketingclause">We'll send you marketing promotions, special offers, inspiration, and policy updates via email.</p>
-    <section>
-</div>
-        <button type="button" class="signup">Sign up</button>
-    </section>
+        {{#each messages}}
+
+            <div class="errors">{{this}}</div>
+
+        {{/each}}
+        <form method="POST" action="/reg">
+        <section>
+            <input type="input" id="email" class="regform" placeholder="Email" name="emailReg">
+        </section>
+        <section>
+            <input type="input" id="firstname" class="regform" placeholder="First Name" name="firstNameReg">
+        </section>
+        <section>
+            <input type="input" id="lastname" class="regform" placeholder="Last Name" name="lastNameReg">
+        </section>
+        <section>
+            <input type="input" id="password" class="regform" placeholder="Create a Password" name="passwordReg">
+        </section>
+        <div class="proxy">
+            <div class="formcaption">Date of Birth</div>
+            <p class="bdayclause">To sign up, you need to be atleast 18 years old. Other people who use AirBNB won't see your birthday</p>
+                <input type="date" id="bday" class="regform" name="dob">
+            </section>
+            <p class="marketingclause">We'll send you marketing promotions, special offers, inspiration, and policy updates via email.</p>
+        </div>
+        <section>
+            <input type="submit" value="Sign up" class="signup"></input>
+        </section>
+    </form>
 </article>

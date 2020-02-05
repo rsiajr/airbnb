@@ -113,7 +113,7 @@ app.get("/rooms",(req,res)=>{
 });
 
 
-// Username and Password validation
+// Login Page: Username and Password validation
 
 app.post("/login",(req,res)=>{
 
@@ -121,13 +121,13 @@ app.post("/login",(req,res)=>{
 
   if(req.body.email=="")
   {
-    errors.push("You need to enter an email address before you can signin");
+    errors.push("You need to enter an EMAIL ADDRESS before you can signin");
 
   }
 
   if(req.body.password=="")
   {
-    errors.push("You need to enter a password before you can signin.")
+    errors.push("You need to enter a PASSWORD before you can signin.")
   }
 
 
@@ -135,6 +135,50 @@ app.post("/login",(req,res)=>{
   {
     res.render("login",{
       messages : errors
+    })
+  }
+
+});
+
+// Registration Page: Username and Password validation
+
+app.post("/reg",(req,res)=>{
+
+    const errorsReg = [];
+
+  if(req.body.emailReg=="")
+  {
+    errorsReg.push("You need to enter an EMAIL ADDRESS before you can signin");
+
+  }
+
+  if(req.body.firstNameReg=="")
+  {
+    errorsReg.push("You need to enter a FIRST NAME before you can signin");
+
+  }
+
+  if(req.body.lastNameReg=="")
+  {
+    errorsReg.push("You need to enter a LAST NAME before you can signin");
+
+  }
+
+  if(req.body.passwordReg=="")
+  {
+    errorsReg.push("You need to enter a PASSWORD before you can signin.")
+  }
+
+//   if(req.body.dob==mm/dd/yyyy)
+//   {
+//     errorsReg.push("You need to enter a DATE OF BIRTH before you can signin.")
+//   }
+
+
+  if(errorsReg.length > 0)
+  {
+    res.render("reg",{
+      messages : errorsReg
     })
   }
 
