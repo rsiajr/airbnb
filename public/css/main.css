@@ -631,10 +631,25 @@ h3{
 
     .regform{
         font-size: 1.5rem;
+        padding: 1%;
     }
 
     .signin{
         font-size: 1.5rem;
+    }
+
+    .regline{
+        margin-top: .7%;
+        margin-bottom: .7%;
+        padding-top: 0;
+        padding-bottom: 1%;
+    }
+
+    .mainregsec{
+        padding-top: 1%;
+    }
+    h3 {
+        margin-top: 2%;
     }
 
 }
@@ -647,6 +662,11 @@ h3{
 
     .errors{
         margin-right: 40%;
+    }
+
+    .regform{
+        margin-top: .5%;
+        margin-bottom: .5%;
     }
 
 }

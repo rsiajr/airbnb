@@ -197,7 +197,7 @@ app.post("/reg",(req,res)=>{
 
   if(schema.validate(req.body.passwordReg) == false)
   {
-    errorsReg.push("Your password must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and atleast one numerical value.")
+    errorsReg.push("Your PASSWORD must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and atleast one numerical value.")
   }
 
   
