@@ -1,12 +1,22 @@
+
+
 <article class="loginform">
     <h2 class="loginheader">Enter credentials below</h2>
-    <section>
-        <input type="input" id="email" class="regform" placeholder="Email">
-    </section>
-    <section>
-        <input type="input" id="password" class="regform" placeholder="Password">
-    </section>
-    <section>
-        <button type="button" class="signin">Sign in</button>
-    </section>
+    <form method="POST" action="/login">
+        <section>
+            <input type="input" id="email" class="regform" placeholder="Email" name="email">
+        </section>
+        <section>
+
+            <input type="input" id="password" class="regform" placeholder="Password" name="password">
+        </section>
+        {{#each messages}}
+
+            <div class="errors">{{this}}</div>
+
+        {{/each}}
+        <section>
+            <input type="submit" value="Sign in" class="signin"></input>
+        </section>
+    </form>
 </article>

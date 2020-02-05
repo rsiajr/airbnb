@@ -112,6 +112,34 @@ app.get("/rooms",(req,res)=>{
     });
 });
 
+
+// Username and Password validation
+
+app.post("/login",(req,res)=>{
+
+    const errors= [];
+
+  if(req.body.email=="")
+  {
+    errors.push("You need to enter an email address before you can signin");
+
+  }
+
+  if(req.body.password=="")
+  {
+    errors.push("You need to enter a password before you can signin.")
+  }
+
+
+  if(errors.length > 0)
+  {
+    res.render("login",{
+      messages : errors
+    })
+  }
+
+});
+
 //Port creation
 
 const PORT=3000;
