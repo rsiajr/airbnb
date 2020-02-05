@@ -4,6 +4,7 @@ const express = require('express');
 const exphbs = require('express-handlebars'); 
 const bodyParser = require('body-parser');
 const passwordValidator = require('password-validator');
+const validator = require("email-validator");
 
 //Schema for password-validator
 
@@ -162,19 +163,25 @@ app.post("/reg",(req,res)=>{
 
   if(req.body.emailReg=="")
   {
-    errorsReg.push("You need to enter an EMAIL ADDRESS before you can signin");
+    errorsReg.push("You need to enter an EMAIL ADDRESS before you can signin.");
+
+  }
+
+  if(validator.validate(req.body.emailReg) == false)
+  {
+    errorsReg.push("You need to enter a valid EMAIL ADDRESS.");
 
   }
 
   if(req.body.firstNameReg=="")
   {
-    errorsReg.push("You need to enter a FIRST NAME before you can signin");
+    errorsReg.push("You need to enter a FIRST NAME before you can signin.");
 
   }
 
   if(req.body.lastNameReg=="")
   {
-    errorsReg.push("You need to enter a LAST NAME before you can signin");
+    errorsReg.push("You need to enter a LAST NAME before you can signin.");
 
   }
 
@@ -183,14 +190,9 @@ app.post("/reg",(req,res)=>{
     errorsReg.push("You need to enter a PASSWORD before you can signin.")
   }
 
-//   if(req.body.passwordReg.is().min(6) && req.body.passwordReg.is().max(8) && req.body.passwordReg.has().uppercase() && req.body.passwordReg.has().lowercase() && req.body.passwordReg.has().digits() && req.body.passwordReg.has().not().spaces())
-//   {
-//     errorsReg.push("Your password must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and numerical value.")
-//   }
-
-  if(schema.validate(req.body.passwordReg))
+  if(schema.validate(req.body.passwordReg) == false)
   {
-    errorsReg.push("Your password must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and numerical value.")
+    errorsReg.push("Your password must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and atleast one numerical value.")
   }
 
   
