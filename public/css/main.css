@@ -27,7 +27,7 @@ a:hover{
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-image: url('/img/beach.jpg');
     height: 100%;
     width: 100%;
@@ -39,6 +39,8 @@ header {
 }
 
 .logo {
+    display: inline-block;
+    margin: 0 5%;
     height: 90%;
     width: 80%;
     padding-top: 1%;
@@ -46,16 +48,19 @@ header {
 }
 
 .nav {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: white;
+    text-align: center;
     flex-flow: column;
     padding: 1% 0;
     font-size: 1rem;
     font-weight: bolder;
 }
 
-.navpadding{
+/* .navpadding{
     padding: 0 2em;
-}
+} */
 
 .nav-li-padding{
     padding: 0 .7em;
@@ -325,14 +330,7 @@ h3{
         background-size: 100%;
         padding: 1% 0;
     }
-    
-    .nav {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 1% 0;
-        font-size: 1.2rem;
-    }
-    
+      
     .youtube{
         padding: 1% 5%;
         width: 360px;
@@ -343,11 +341,6 @@ h3{
 
 @media only screen and (min-width: 29.375em) {
 
-    .nav {
-        display: inline;
-        padding: 7% 2%;
-        font-size: 1.2rem;
-    }
 
     .fillform{
         padding: 1% 15%;
@@ -386,15 +379,6 @@ h3{
         width: 20%;
         padding-top: 1%;
         margin-left: 40%;
-    }
-
-
-    .nav {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        padding: 0 .2%;
-        margin: 0 3%;
-        text-align: center;
     }
 
     .fillform{

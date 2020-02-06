@@ -26,9 +26,6 @@ const app = express();
 //To customize CSS per handlebar
 
 app.use(express.static('public'));
-
-//Create engines
-
 app.engine('handlebars', exphbs({ defaultLayout: 'main' })); 
 app.set('view engine', 'handlebars'); 
 app.use(express.static('public')); 
@@ -136,7 +133,7 @@ app.post("/login",(req,res)=>{
 
   if(req.body.email=="")
   {
-    errors.push("You need to enter an EMAIL ADDRESS before you can signin");
+    errors.push("You need to enter an EMAIL ADDRESS before you can sign in");
 
   }
 
@@ -148,7 +145,7 @@ app.post("/login",(req,res)=>{
 
   if(req.body.password=="")
   {
-    errors.push("You need to enter a PASSWORD before you can signin.")
+    errors.push("You need to enter a PASSWORD before you can sign in.")
   }
 
   if(errors.length > 0)
@@ -168,7 +165,7 @@ app.post("/reg",(req,res)=>{
 
   if(req.body.emailReg=="")
   {
-    errorsReg.push("You need to enter an EMAIL ADDRESS before you can signin.");
+    errorsReg.push("You need to enter an EMAIL ADDRESS before you can sign in.");
 
   }
 
@@ -180,19 +177,19 @@ app.post("/reg",(req,res)=>{
 
   if(req.body.firstNameReg=="")
   {
-    errorsReg.push("You need to enter a FIRST NAME before you can signin.");
+    errorsReg.push("You need to enter a FIRST NAME before you can sign in.");
 
   }
 
   if(req.body.lastNameReg=="")
   {
-    errorsReg.push("You need to enter a LAST NAME before you can signin.");
+    errorsReg.push("You need to enter a LAST NAME before you can sign in.");
 
   }
 
   if(req.body.passwordReg=="")
   {
-    errorsReg.push("You need to enter a PASSWORD before you can signin.")
+    errorsReg.push("You need to enter a PASSWORD before you can sign in.")
   }
 
   if(schema.validate(req.body.passwordReg) == false)
