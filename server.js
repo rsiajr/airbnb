@@ -155,6 +155,17 @@ app.post("/login",(req,res)=>{
     })
   }
 
+  else(errors.length == 0)
+  {
+    res.render('home',{
+
+      title: "Home",
+      headingInfo : "Home Page",
+      home : sampleDB
+
+    })  
+  }
+
 });
 
 // Registration Page: Username and Password validation
@@ -204,12 +215,24 @@ app.post("/reg",(req,res)=>{
 //   }
 
 
-  if(errorsReg.length > 0)
+  if(errorsReg.length == 0)
   {
-    res.render("reg",{
+    res.render("home",{
       messages : errorsReg
     })
   }
+
+  else(errors.length == 0)
+  {
+    res.render('home',{
+
+      title: "Home",
+      headingInfo : "Home Page",
+      home : sampleDB
+
+    })  
+  }
+
 
 });
 
