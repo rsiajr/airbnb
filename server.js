@@ -33,17 +33,17 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //Request and Response
 
+// app.get('/', function (req, res) { 
+
+//     res.render('main',{
+
+//         title: "Main",
+
+//     }); 
+
+// }); 
+
 app.get('/', function (req, res) { 
-
-    res.render('main',{
-
-        title: "Main",
-
-    }); 
-
-}); 
-
-app.get('/home', function (req, res) { 
 
     const sampleDB= [];
 
