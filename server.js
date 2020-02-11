@@ -79,6 +79,73 @@ app.get('/reg', function (req, res) {
 
 }); 
 
+// Registration Page: Username and Password validation
+
+app.post("/reg",(req,res)=>{
+
+  const errorsReg = [];
+
+if(req.body.emailReg=="")
+{
+  errorsReg.push("You need to enter an EMAIL ADDRESS before you can sign in.");
+
+}
+
+if(validator.validate(req.body.emailReg) == false)
+{
+  errorsReg.push("You need to enter a valid EMAIL ADDRESS.");
+
+}
+
+if(req.body.firstNameReg=="")
+{
+  errorsReg.push("You need to enter a FIRST NAME before you can sign in.");
+
+}
+
+if(req.body.lastNameReg=="")
+{
+  errorsReg.push("You need to enter a LAST NAME before you can sign in.");
+
+}
+
+if(req.body.passwordReg=="")
+{
+  errorsReg.push("You need to enter a PASSWORD before you can sign in.")
+}
+
+if(schema.validate(req.body.passwordReg) == false)
+{
+  errorsReg.push("Your PASSWORD must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and atleast one numerical value.")
+}
+
+
+//   if(req.body.dob==mm/dd/yyyy)
+//   {
+//     errorsReg.push("You need to enter a DATE OF BIRTH before you can signin.")
+//   }
+
+
+if(errorsReg.length == 0)
+{
+  res.render("home",{
+    messages : errorsReg
+  })
+}
+
+else(errorsReg.length == 0)
+{
+  res.render('home',{
+
+    title: "Home",
+    headingInfo : "Home Page",
+
+  })  
+}
+
+});
+
+
 app.get('/login', function (req, res) { 
 
     res.render('login',{
@@ -90,14 +157,47 @@ app.get('/login', function (req, res) {
 
 }); 
 
-// router.post('/login', function(req, res, next) {
-//     if (!req.body.username || !req.body.password) {
-//         return res.status(400).json({
-//             message: 'Please fill out all fields'
-//         });
-//     }
-    
-// })(req, res, next);
+// Login Page: Username and Password validation
+
+app.post("/login",(req,res)=>{
+
+  const errors= [];
+
+if(req.body.email=="")
+{
+  errors.push("You need to enter an EMAIL ADDRESS before you can sign in");
+
+}
+
+if(validator.validate(req.body.email) == false)
+{
+  errors.push("You need to enter a valid EMAIL ADDRESS.");
+
+}
+
+if(req.body.password=="")
+{
+  errors.push("You need to enter a PASSWORD before you can sign in.")
+}
+
+if(errors.length > 0)
+{
+  res.render("login",{
+    messages : errors
+  })
+}
+
+else(errors.length == 0)
+{
+  res.render('home',{
+
+    title: "Home",
+    headingInfo : "Home Page",
+
+  })  
+}
+
+});
 
 
 app.get("/rooms",(req,res)=>{
@@ -124,117 +224,6 @@ app.get("/rooms",(req,res)=>{
     });
 });
 
-
-// Login Page: Username and Password validation
-
-app.post("/login",(req,res)=>{
-
-    const errors= [];
-
-  if(req.body.email=="")
-  {
-    errors.push("You need to enter an EMAIL ADDRESS before you can sign in");
-
-  }
-
-  if(validator.validate(req.body.email) == false)
-  {
-    errors.push("You need to enter a valid EMAIL ADDRESS.");
-
-  }
-
-  if(req.body.password=="")
-  {
-    errors.push("You need to enter a PASSWORD before you can sign in.")
-  }
-
-  if(errors.length > 0)
-  {
-    res.render("login",{
-      messages : errors
-    })
-  }
-
-  else(errors.length == 0)
-  {
-    res.render('home',{
-
-      title: "Home",
-      headingInfo : "Home Page",
-      home : sampleDB
-
-    })  
-  }
-
-});
-
-// Registration Page: Username and Password validation
-
-app.post("/reg",(req,res)=>{
-
-    const errorsReg = [];
-
-  if(req.body.emailReg=="")
-  {
-    errorsReg.push("You need to enter an EMAIL ADDRESS before you can sign in.");
-
-  }
-
-  if(validator.validate(req.body.emailReg) == false)
-  {
-    errorsReg.push("You need to enter a valid EMAIL ADDRESS.");
-
-  }
-
-  if(req.body.firstNameReg=="")
-  {
-    errorsReg.push("You need to enter a FIRST NAME before you can sign in.");
-
-  }
-
-  if(req.body.lastNameReg=="")
-  {
-    errorsReg.push("You need to enter a LAST NAME before you can sign in.");
-
-  }
-
-  if(req.body.passwordReg=="")
-  {
-    errorsReg.push("You need to enter a PASSWORD before you can sign in.")
-  }
-
-  if(schema.validate(req.body.passwordReg) == false)
-  {
-    errorsReg.push("Your PASSWORD must be 6-8 characters long, with one uppercase and one lowercase letter, no spaces, and atleast one numerical value.")
-  }
-
-  
-//   if(req.body.dob==mm/dd/yyyy)
-//   {
-//     errorsReg.push("You need to enter a DATE OF BIRTH before you can signin.")
-//   }
-
-
-  if(errorsReg.length == 0)
-  {
-    res.render("home",{
-      messages : errorsReg
-    })
-  }
-
-  else(errors.length == 0)
-  {
-    res.render('home',{
-
-      title: "Home",
-      headingInfo : "Home Page",
-      home : sampleDB
-
-    })  
-  }
-
-
-});
 
 //Port creation
 
