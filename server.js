@@ -126,22 +126,22 @@ if(schema.validate(req.body.passwordReg) == false)
 //   }
 
 
-if(errorsReg.length == 0)
+if(errorsReg.length > 0)
 {
-  res.render("home",{
+  res.render("reg",{
     messages : errorsReg
   })
 }
 
-else(errorsReg.length == 0)
-{
-  res.render('home',{
+// else(errorsReg.length == 0)
+// {
+//   res.render('home',{
 
-    title: "Home",
-    headingInfo : "Home Page",
+//     title: "Home",
+//     headingInfo : "Home Page",
 
-  })  
-}
+//   })  
+// }
 
 });
 
@@ -187,15 +187,15 @@ if(errors.length > 0)
   })
 }
 
-else(errors.length == 0)
-{
-  res.render('home',{
+// else(errors.length == 0)
+// {
+//   res.render('home',{
 
-    title: "Home",
-    headingInfo : "Home Page",
+//     // title: "Home",
+//     // headingInfo : "Home Page",
 
-  })  
-}
+//   })  
+// }
 
 });
 
