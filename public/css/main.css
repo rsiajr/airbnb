@@ -110,7 +110,15 @@ header {
     color: gray;
     font-size: 1rem;
 }
-    
+
+.submit{
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
 label{
     font-family: arial; 
     font-size: .8em;
@@ -783,6 +791,13 @@ h3{
 
     .search{
         font-size: 2.5rem;
+        margin: 2% 30%;
+        padding: 1%;
+        
+    }
+
+    h1 {
+        padding: 0;
     }
 
 }
