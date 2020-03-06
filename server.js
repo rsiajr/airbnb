@@ -120,12 +120,6 @@ if(schema.validate(req.body.passwordReg) == false)
 }
 
 
-//   if(req.body.dob==mm/dd/yyyy)
-//   {
-//     errorsReg.push("You need to enter a DATE OF BIRTH before you can signin.")
-//   }
-
-
 if(errorsReg.length > 0)
 {
   res.render("reg",{
@@ -133,15 +127,6 @@ if(errorsReg.length > 0)
   })
 }
 
-// else(errorsReg.length == 0)
-// {
-//   res.render('home',{
-
-//     title: "Home",
-//     headingInfo : "Home Page",
-
-//   })  
-// }
 
 });
 
