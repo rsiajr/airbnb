@@ -100,7 +100,32 @@ if(errorsReg.length > 0)
   })
 }
 
+else if(errorsReg.length == 0)
+{
+  const {firstNameReg,lastNameReg,emailReg} = req.body;
 
+  const sgMail = require('@sendgrid/mail');
+  sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
+  const msg = {
+  to: `kadeem.best@hotmail.com`,
+  from: `${emailReg}`,
+  subject: 'Registration Form Submit',
+  html: 
+  `Customer's Full Name ${firstNameReg} ${lastNameReg} <br><br>
+  Visitor's email address ${emailReg} <br><br>
+  
+  `,
+  };
+
+  sgMail.send(msg)
+  .then(()=>{
+    res.redirect("/");
+  })
+  .catch(err=>{
+    console.log(`Error ${err}`);
+  })
+
+}
 });
 
 
