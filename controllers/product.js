@@ -1,0 +1,37 @@
+const express = require('express'); 
+const router = express.Router();
+
+//Load the productModel
+
+const productModel = require("../models/product")
+
+router.get("/rooms",(req,res)=>{
+
+    res.render("products/rooms",{
+        title: "Rooms",
+        headingInfo : "Room Listings Page",
+        products: productModel.getAllProducts()
+    });
+});
+
+router.get('/productAdd', function (req, res) { 
+
+  res.render('products/productAdd',{
+
+      title: "Product Add Form",
+      headingInfo : "Add Product Page",
+
+  }); 
+
+}); 
+
+
+router.post("/productAdd",(req,res)=>{
+
+  res.render("product/productAdd",{
+  
+  })
+
+})
+
+module.exports = router;
