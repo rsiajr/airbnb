@@ -33,16 +33,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //Request and Response
 
-// app.get('/', function (req, res) { 
-
-//     res.render('main',{
-
-//         title: "Main",
-
-//     }); 
-
-// }); 
-
 app.get('/', function (req, res) { 
 
     const sampleDB= [];
@@ -59,7 +49,7 @@ app.get('/', function (req, res) {
 
     sampleDB.push({img:'img/carousel-6.jpg',title:'House on hill'});
 
-    res.render("home",{
+    res.render("general/home",{
         title: "Home",
         headingInfo : "Home Page",
         home : sampleDB
@@ -70,7 +60,7 @@ app.get('/', function (req, res) {
 
 app.get('/reg', function (req, res) { 
 
-    res.render('reg',{
+    res.render('general/reg',{
 
         title: "Registration",
         headingInfo : "Registration Page"
@@ -122,7 +112,7 @@ if(schema.validate(req.body.passwordReg) == false)
 
 if(errorsReg.length > 0)
 {
-  res.render("reg",{
+  res.render("general/reg",{
     messages : errorsReg
   })
 }
@@ -133,7 +123,7 @@ if(errorsReg.length > 0)
 
 app.get('/login', function (req, res) { 
 
-    res.render('login',{
+    res.render('general/login',{
 
         title: "Login",
         headingInfo : "Login Page"
@@ -167,7 +157,7 @@ if(req.body.password=="")
 
 if(errors.length > 0)
 {
-  res.render("login",{
+  res.render("general/login",{
     messages : errors
   })
 }
@@ -201,7 +191,7 @@ app.get("/rooms",(req,res)=>{
 
     prodDB.push({img:'img/forrent-6.jpg',title:'Room for rent',desc:'Castle-like room for rent',rate:`1149.99`});
 
-    res.render("rooms",{
+    res.render("products/rooms",{
         title: "Rooms",
         headingInfo : "Room Listings Page",
         rooms : prodDB
