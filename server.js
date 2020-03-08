@@ -23,7 +23,7 @@ const productController = require("./controllers/product");
 
 //Map each controller to the app object
 app.use("/",generalController);
-app.use("/product",productController);
+app.use("/products",productController);
 
 //Port creation
 

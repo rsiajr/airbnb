@@ -28,7 +28,7 @@ router.get('/productAdd', function (req, res) {
 
 router.post("/productAdd",(req,res)=>{
 
-  res.render("product/productAdd",{
+  res.render("products/productAdd",{
   
   })
 
