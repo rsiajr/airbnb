@@ -31,6 +31,10 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public')); 
 app.use(bodyParser.urlencoded({ extended: false })) 
 
+//Load the productModel
+
+const productModel = require("./models/product")
+
 //Request and Response
 
 app.get('/', function (req, res) { 
@@ -177,25 +181,10 @@ if(errors.length > 0)
 
 app.get("/rooms",(req,res)=>{
 
-    const prodDB= [];
-
-    prodDB.push({img:'img/forrent-1.jpg',title:'Room for rent', desc:'Sunny bedroom room for rent', rate:`649.99`});
-
-    prodDB.push({img:'img/forrent-2.jpg',title:'House for rent',desc:'Tuscan-inspired house for rent',rate:`749.99`});
-
-    prodDB.push({img:'img/forrent-3.jpg',title:'Rooms for rent',desc:'Chic 3-bedroom house for rent',rate:`849.99`});
-
-    prodDB.push({img:'img/forrent-4.jpg',title:'Tree house for rent',desc:'Treehouse in the jungle for rent',rate:`949.99`});
-
-    prodDB.push({img:'img/forrent-5.jpg',title:'Room for rent',desc:'Quaint room in the city for rent',rate:`1049.99`});
-
-    prodDB.push({img:'img/forrent-6.jpg',title:'Room for rent',desc:'Castle-like room for rent',rate:`1149.99`});
-
     res.render("products/rooms",{
         title: "Rooms",
         headingInfo : "Room Listings Page",
-        rooms : prodDB
-
+        products: productModel.getAllProducts()
     });
 });
 
@@ -203,8 +192,8 @@ app.get('/productAdd', function (req, res) {
 
   res.render('products/productAdd',{
 
-      title: "Product Add",
-      headingInfo : "Add Product Page"
+      title: "Product Add Form",
+      headingInfo : "Add Product Page",
 
   }); 
 

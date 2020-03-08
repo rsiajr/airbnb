@@ -26,4 +26,5 @@ const product =
 
 }
 
+product.init();
 module.exports=product;
