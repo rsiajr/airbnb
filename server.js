@@ -199,6 +199,25 @@ app.get("/rooms",(req,res)=>{
     });
 });
 
+app.get('/productAdd', function (req, res) { 
+
+  res.render('products/productAdd',{
+
+      title: "Product Add",
+      headingInfo : "Add Product Page"
+
+  }); 
+
+}); 
+
+
+app.post("/productAdd",(req,res)=>{
+
+  res.render("product/productAdd",{
+  
+  })
+
+})
 
 //Port creation
 
