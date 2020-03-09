@@ -52,6 +52,20 @@ router.get('/reg', function (req, res) {
 
 }); 
 
+// Welcome Page
+
+router.get('/welcome', function (req, res) { 
+
+  res.render('general/welcome',{
+
+      title: "Welcome Page",
+      headingInfo : "Welcome Page"
+
+  });  
+
+}); 
+
+
 // Registration Page: Username and Password validation
 
 router.post("/reg",(req,res)=>{
@@ -67,6 +81,12 @@ if(req.body.emailReg=="")
 if(validator.validate(req.body.emailReg) == false)
 {
   errorsReg.push("You need to enter a valid EMAIL ADDRESS.");
+
+}
+
+if(req.body.contactNum=="")
+{
+  errorsReg.push("You need to enter a MOBILE NUMBER before you can sign in.");
 
 }
 
@@ -102,7 +122,7 @@ if(errorsReg.length > 0)
 
 else if(errorsReg.length == 0)
 {
-  const {firstNameReg,lastNameReg,emailReg} = req.body;
+  const {firstNameReg,lastNameReg,emailReg,contactNum} = req.body;
 
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
@@ -111,19 +131,37 @@ else if(errorsReg.length == 0)
   from: `${emailReg}`,
   subject: 'Registration Form Submit',
   html: 
-  `Customer's Full Name ${firstNameReg} ${lastNameReg} <br><br>
-  Visitor's email address ${emailReg} <br><br>
-  
+  `Customer's Full Name: ${firstNameReg} ${lastNameReg} <br>
+  Visitor's Email Address: ${emailReg} <br>
+  Visitor's Contact Number: ${contactNum} <br>
   `,
   };
 
-  sgMail.send(msg)
-  .then(()=>{
-    res.redirect("/");
-  })
-  .catch(err=>{
-    console.log(`Error ${err}`);
-  })
+  const accountSid = process.env.TWILIO_ID;
+  const authToken = process.env.TWILIO_TOKEN;
+  const client = require('twilio')(accountSid, authToken);
+  
+  client.messages
+    .create({
+       body: `A message from Vagabond: Thank you for registering to Vagabond!`,
+       from: '+12403293226',
+       to: `${req.body.contactNum}`
+     })
+
+     sgMail.send(msg)
+     .then(()=>{
+       res.redirect("/welcome");
+     })
+     .catch(err=>{
+       console.log(`Error ${err}`);
+     })
+    .then(message => {
+      console.log(message.sid);
+      res.render("/welcome");
+    })
+    .catch((err)=>{
+        console.log(`Error ${err}`);
+    })
 
 }
 });
