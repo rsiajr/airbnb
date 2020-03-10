@@ -14,9 +14,9 @@ router.get("/rooms",(req,res)=>{
     });
 });
 
-router.get('/productAdd', function (req, res) { 
+router.get("/productAdd", function (req, res) { 
 
-  res.render('products/productAdd',{
+  res.render("products/productAdd",{
 
       title: "Product Add Form",
       headingInfo : "Add Product Page",
