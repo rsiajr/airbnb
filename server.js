@@ -28,7 +28,7 @@ app.use("/products",productController);
 
 //Port creation
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT,()=>{
     console.log(`Web Server Started`);
