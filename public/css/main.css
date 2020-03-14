@@ -189,6 +189,34 @@ input:focus{
     padding: 0 0 5% 0;
 }
 
+.featureblock{
+    display: block;
+    background-color: teal;
+    color: white;
+}
+
+.featureh1{
+    color: white;
+    background-color: teal;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 1em;
+}
+
+.featureh3{
+    color: whitesmoke;
+    padding-bottom: 2%;
+    font-size: .7rem;
+}
+
+.features{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+    text-align: center;
+    color: teal;
+    margin-top: 1%;
+}
 
 /* Registration Page CSS */
 
@@ -437,6 +465,22 @@ h3{
         display: grid;
         padding: 1% 2%;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .featureh1{
+
+        font-size: 3em;
+    }
+    
+    .featureh3{
+    
+        font-size: 1.5rem;
+    }
+    
+    .features{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 2rem;
     }
 
 }

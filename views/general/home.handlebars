@@ -90,5 +90,17 @@
         <article>
             <a href="#"><img src="img/canva.png" alt="promotion" class="promophoto"></a>
         </article>
-    </section>
+    </section><br><br>
 </div>
+<div class="featureblock">
+    <h1 class="featureh1">Featured Vagabond destinations</h1>
+    <h3 class="featureh3">Browse beautiful places to stay with all the comforts of home, plus more.</h3>
+</div>
+<section class="features">
+    {{#each feature }}
+        <div>
+            <img src="{{ this.img }}" style="width:100%" class="experience" alt="{{ this.title }}">
+            {{ this.title}} | Price: {{ this.price}}
+        </div>
+    {{/each}}  
+</section>

@@ -32,11 +32,18 @@ router.get('/', function (req, res) {
 
     sampleDB.push({img:'img/carousel-6.jpg',title:'House on hill'});
 
+    const featureDB= [];
+
+    featureDB.push({img:'img/feature-1.jpg',title:'Featured Apartment',price: '$50 per night'})
+
+    featureDB.push({img:'img/feature-2.jpg',title:'Featured House',price: '$200 per night'})
+
     res.render("general/home",{
         title: "Home",
         headingInfo : "Home Page",
-        home : sampleDB
-
+        home : sampleDB,
+        feature : featureDB
+        
     });
 
 }); 
