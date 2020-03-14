@@ -127,8 +127,8 @@ else if(errorsReg.length == 0)
   const sgMail = require('@sendgrid/mail');
   sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
   const msg = {
-  to: `jr.sia@humber.ca`,
-  from: `${emailReg}`,
+  to: `${emailReg}`,
+  from: `rsiajr@gmail.com`,
   subject: 'Registration Form Submit',
   html: 
   `Customer's Full Name: ${firstNameReg} ${lastNameReg} <br>
