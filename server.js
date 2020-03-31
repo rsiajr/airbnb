@@ -3,6 +3,7 @@
 const express = require('express'); 
 const exphbs = require('express-handlebars'); 
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 require('dotenv').config({path:"./config/keys.env"});
 
 //Invoke express
@@ -16,6 +17,10 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars'); 
 app.use(express.static('public')); 
 app.use(bodyParser.urlencoded({ extended: false })) 
+
+//Mongoose code
+mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
+
 
 //Load controllers
 
