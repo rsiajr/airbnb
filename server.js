@@ -19,7 +19,11 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false })) 
 
 //Mongoose code
-mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=>{
+    console.log(`Connected to MongoDB Database`);
+})
+.catch(err=>console.log(`Error occured when connecting to the database ${err}`));
 
 
 //Load controllers
