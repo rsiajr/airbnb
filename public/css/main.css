@@ -370,6 +370,31 @@ h3{
     color: darkgreen;
 }
 
+/* Add product page / Loging welcome page CSS */
+
+.welcgrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 2% 0;
+    border-style: solid;
+    border-width: thin;
+    border-color: gray;
+    margin: 0 25%;
+    /* background-color: tomato; */
+}
+
+.fieldlabels{
+    color: teal;
+    font-size: 1.5rem;
+    margin: 2% 0;
+}
+
+.welcdivs{
+    margin: 0 15%;
+    padding: 2%;
+}
+
 /* -----------------Media Queries--------------------*/
 
 /* HOME PAGE MEDIA QUERIES */

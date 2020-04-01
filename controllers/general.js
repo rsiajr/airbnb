@@ -59,7 +59,7 @@ router.get('/reg', function (req, res) {
 
 }); 
 
-// Welcome Page
+// Registration Welcome Page
 
 router.get('/welcome', function (req, res) { 
 
@@ -67,6 +67,21 @@ router.get('/welcome', function (req, res) {
 
       title: "Welcome Page",
       headingInfo : "Welcome Page"
+
+  });  
+
+}); 
+
+// Login Welcome Page with add room section
+
+// Welcome Page
+
+router.get('/loginwelc', function (req, res) { 
+
+  res.render('general/loginwelc',{
+
+      title: "Login Welcome Page",
+      headingInfo : "Login Welcome Page"
 
   });  
 
@@ -215,15 +230,15 @@ if(errors.length > 0)
   })
 }
 
-// else(errors.length == 0)
-// {
-//   res.render('home',{
+else(errors.length == 0)
+{
+  res.render('general/loginwelc',{
 
-//     // title: "Home",
-//     // headingInfo : "Home Page",
+    title: "Login Welcome Page",
+    headingInfo : "Login Welcome Page",
 
-//   })  
-// }
+  })  
+}
 
 });
 
