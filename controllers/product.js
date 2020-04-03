@@ -1,6 +1,5 @@
 const express = require('express'); 
 const router = express.Router();
-
 //Load the productModel
 
 const productModel = require("../models/product.js")
