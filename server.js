@@ -30,10 +30,12 @@ mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {useNewUrlParser: true,
 
 const generalController = require("./controllers/general");
 const productController = require("./controllers/product");
+const taskController = require("./controllers/task");
 
 //Map each controller to the app object
 app.use("/",generalController);
 app.use("/products",productController);
+app.use("/task",taskController);
 
 //Port creation
 

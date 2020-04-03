@@ -1,7 +1,7 @@
 const express = require('express'); 
 const router = express.Router();
-//Load the productModel
 
+//Load the productModel
 const productModel = require("../models/product.js")
 
 router.get("/rooms",(req,res)=>{

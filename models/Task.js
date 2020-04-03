@@ -15,7 +15,7 @@ const taskSchema = new Schema({
     },
     price:
     {
-        type:Decimal128,
+        type:Number,
         required:true
     },
     dateCreated:
