@@ -242,13 +242,4 @@ else(errors.length == 0)
 
 });
 
-router.get("/dashboard",(req,res)=>
-{
-    res.render("general/dashboard",{
-
-        title: "Dashboard Page",
-        headingInfo : "Dashboard Page",
-    });
-})
-
 module.exports = router;

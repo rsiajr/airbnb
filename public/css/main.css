@@ -396,6 +396,10 @@ h3{
     padding: 2%;
 }
 
+.submitform{
+    margin: 2% 2%;
+}
+
 /* -----------------Media Queries--------------------*/
 
 /* HOME PAGE MEDIA QUERIES */
@@ -696,6 +700,10 @@ h3{
         margin: 2% 25%;
     }
 
+    .submitform{
+        margin: 2% 25%;
+    }
+
     .signin{
         margin: 5% 25%;
     }
@@ -709,6 +717,11 @@ h3{
 @media only screen and (min-width: 37.5em) {
 
     .regform{
+        font-size: 1.5rem;
+        padding: 1%;
+    }
+
+    .submitform{
         font-size: 1.5rem;
         padding: 1%;
     }
@@ -747,6 +760,14 @@ h3{
         margin-top: .5%;
         margin-bottom: .5%;
     }
+
+    .submitform{
+    margin-top: .5%;
+    margin-bottom: .5%;
+    margin-right: 40%;
+    margin-left: 40%;
+    font-size: 1.5rem;
+    padding: 1%;
 
 }
 
