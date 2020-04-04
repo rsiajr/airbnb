@@ -6,7 +6,7 @@ const taskModel = require("../models/Task.js")
 
 router.get("/loginwelc",(req,res)=>
 {
-    res.render("task/loginwelc",{
+    res.render("general/loginwelc",{
 
         title: "Login Welcome Page",
         headingInfo : "Login Welcome Page",
@@ -24,7 +24,7 @@ router.post("/loginwelc", (req,res) => {
     const task = new taskModel(newUser);
     task.save()
     .then(()=>{
-        res.redirect("/dashboard");
+        res.redirect("general/dashboard");
     })
     .catch(err=>console.log(`Error occurred when insterting in the database: ${err}`))
 
