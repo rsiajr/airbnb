@@ -13,7 +13,7 @@ router.get("/loginwelc",(req,res)=>
     });
 })
 
-router.post("/loginwelc",(req,res)=>{
+router.post("/loginwelc", (req,res) => {
 
     const newUser = {
         title : req.body.title,
@@ -27,11 +27,8 @@ router.post("/loginwelc",(req,res)=>{
         res.redirect("/dashboard");
     })
     .catch(err=>console.log(`Error occurred when insterting in the database: ${err}`))
+
 })
 
-router.get("/list",(req,res)=>
-{
-    res.render("task/taskDashboard");
-})
 
 module.exports = router;

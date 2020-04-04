@@ -13,24 +13,4 @@ router.get("/rooms",(req,res)=>{
     });
 });
 
-// router.get("/productAdd", function (req, res) { 
-
-//   res.render("products/productAdd",{
-
-//       title: "Product Add Form",
-//       headingInfo : "Add Product Page",
-
-//   }); 
-
-// }); 
-
-
-// router.post("/productAdd",(req,res)=>{
-
-//   res.render("products/productAdd",{
-  
-//   })
-
-// });
-
 module.exports = router;
