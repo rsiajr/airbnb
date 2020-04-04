@@ -1,0 +1,21 @@
+ <h2 class="welc">Update Task</h2>
+    <form method="POST" action="/task/update/{{_id}}?method=PUT">
+
+        <div class="searchby">
+            <label>Title</label>
+            <input type="text" name="title" id="title" value="{{title}}" >
+        </div><br>
+
+        <div class="searchby">
+            <label>Description</label><br>
+            <textarea id="description" name="description">{{description}}</textarea>
+        </div><br>
+
+        <div class="searchby">
+            <label>Price</label>
+            <input type="number" name="price" id="price" value="{{price}}">
+        </div><br>
+
+        <input type="submit" value="Update Task" class="submitform">
+    </form>
+

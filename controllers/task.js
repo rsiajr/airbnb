@@ -57,4 +57,52 @@ router.get("/dashboard",(req,res)=>
 
 })
 
+router.get("/edit/:id",(req,res)=>{
+
+    taskModel.findById(req.params.id)
+    .then((task)=>{
+
+        const {_id,title,description,price} = task;
+        res.render("products/productEditForm",{
+            _id,
+            title,
+            description,
+            price,
+        })
+
+    })
+    .catch(err=>console.log(`Error happened when pulling from the database :${err}`));
+
+
+})
+
+router.put("/update/:id",(req,res)=>{
+
+    const task =
+    {
+        title:req.body.title,
+        description:req.body.description,
+        price:req.body.price,
+    }
+
+    taskModel.updateOne({_id:req.params.id},task)
+    .then(()=>{
+        res.redirect("/products/dashboard");
+    })
+    .catch(err=>console.log(`Error happened when updating data from the database :${err}`));
+
+
+});
+
+
+router.delete("/delete/:id",(req,res)=>{
+    
+    taskModel.deleteOne({_id:req.params.id})
+    .then(()=>{
+        res.redirect("/products/dashboard");
+    })
+    .catch(err=>console.log(`Error happened when updating data from the database :${err}`));
+
+});
+
 module.exports = router;
