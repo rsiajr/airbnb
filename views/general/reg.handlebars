@@ -10,19 +10,23 @@
         {{/each}}
         <form method="POST" action="/reg">
         <section>
-            <input type="input" id="email" class="regform" placeholder="Email" name="emailReg">
+            <input type="input" id="email" class="regform" placeholder="Email" name="email">
         </section>
         <section>
             <input type="input" id="phone" class="regform" placeholder="Contact Number" name="contactNum">
         </section>
         <section>
-            <input type="input" id="firstName" class="regform" placeholder="First Name" name="firstNameReg">
+            <input type="input" id="firstName" class="regform" placeholder="First Name" name="firstName">
         </section>
         <section>
-            <input type="input" id="lastName" class="regform" placeholder="Last Name" name="lastNameReg">
+            <input type="input" id="lastName" class="regform" placeholder="Last Name" name="lastName">
         </section>
         <section>
-            <input type="input" id="password" class="regform" placeholder="Create a Password" name="passwordReg" maxlength="8">
+            <input type="input" id="password" class="regform" placeholder="Create a Password" name="password" maxlength="8">
+        </section>
+        <section>
+            <label>File Upload</label>
+            <input type="file" name="profilePic" id="profilePic"> <br><br>
         </section>
         <div class="proxy">
             <div class="formcaption">Date of Birth</div>

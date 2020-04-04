@@ -73,7 +73,6 @@ router.get("/edit/:id",(req,res)=>{
     })
     .catch(err=>console.log(`Error happened when pulling from the database :${err}`));
 
-
 })
 
 router.put("/update/:id",(req,res)=>{
