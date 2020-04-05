@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
-//Load the taskModel
-const taskModel = require("../models/Task")
+const taskModel = require("../models/Task");
 
 router.get("/loginwelc",(req,res)=>
 {
@@ -26,7 +24,7 @@ router.post("/loginwelc", (req,res) => {
     .then(()=>{
         res.redirect("products/dashboard");
     })
-    .catch(err=>console.log(`Error occurred when insterting in the database: ${err}`))
+    .catch(err=>console.log(`Error occurred when inserting in the database: ${err}`))
 
 })
 
@@ -89,7 +87,7 @@ router.put("/update/:id",(req,res)=>{
 
     taskModel.updateOne({_id:req.params.id},task)
     .then(()=>{
-        res.redirect("/products/dashboard");
+        res.redirect("/task/dashboard");
     })
     .catch(err=>console.log(`Error happened when updating data from the database :${err}`));
 
@@ -101,7 +99,7 @@ router.delete("/delete/:id",(req,res)=>{
     
     taskModel.deleteOne({_id:req.params.id})
     .then(()=>{
-        res.redirect("/products/dashboard");
+        res.redirect("/task/dashboard");
     })
     .catch(err=>console.log(`Error happened when updating data from the database :${err}`));
 
