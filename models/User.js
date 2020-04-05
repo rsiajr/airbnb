@@ -43,7 +43,6 @@ const bcrypt = require("bcryptjs");
 userSchma.pre("save",function(next)
 {
 
-    //salt random generated characters or strings
     bcrypt.genSalt(10)
     .then((salt)=>{
         
