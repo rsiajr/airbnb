@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 //Load the taskModel
-const taskModel = require("../models/Task.js")
+const taskModel = require("../models/Task")
 
 router.get("/loginwelc",(req,res)=>
 {
@@ -46,14 +46,17 @@ router.get("/dashboard",(req,res)=>
         });
 
     res.render("products/dashboard",{
-
-        title: "Dashboard Page",
-        headingInfo : "Dashboard Page",
         data : filteredTask
     });
 
     })
     .catch(err=>console.log(`Error happened when pulling from the database :${err}`));
+
+})
+
+router.get("/description",(req,res)=>{
+
+    
 
 })
 
@@ -67,7 +70,7 @@ router.get("/edit/:id",(req,res)=>{
             _id,
             title,
             description,
-            price,
+            price
         })
 
     })
@@ -81,7 +84,7 @@ router.put("/update/:id",(req,res)=>{
     {
         title:req.body.title,
         description:req.body.description,
-        price:req.body.price,
+        price:req.body.price
     }
 
     taskModel.updateOne({_id:req.params.id},task)

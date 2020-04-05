@@ -21,6 +21,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public')); 
 app.use(bodyParser.urlencoded({ extended: false })) 
 
+
 //Mongoose code
 mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{
@@ -40,7 +41,7 @@ app.use("/",generalController);
 app.use("/products",productController);
 app.use("/task",taskController);
 app.use("/",(req,res)=>{
-    res.render("General/404");
+    res.render("General/general404");
 });
 
 app.use((req,res,next)=>{
