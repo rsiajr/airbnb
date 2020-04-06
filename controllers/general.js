@@ -48,16 +48,6 @@ router.get('/', function (req, res) {
 
 }); 
 
-router.get('/reg', function (req, res) { 
-
-    res.render('general/reg',{
-
-        title: "Registration",
-        headingInfo : "Registration Page"
-
-    });  
-
-}); 
 
 // Registration Welcome Page
 

@@ -4,13 +4,19 @@ const userModel = require("../models/User");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 
+router.get('/reg', function (req, res) { 
 
-router.get("/register",(req,res)=>
-{
-    res.render("user/register");
-});
+    res.render('user/reg',{
 
-router.post("/register",(req,res)=>
+        title: "Registration",
+        headingInfo : "Registration Page"
+
+    });  
+
+}); 
+
+
+router.post("/reg",(req,res)=>
 { 
 
     const newUser = 
@@ -49,7 +55,7 @@ router.post("/register",(req,res)=>
 
 router.get("/login",(req,res)=>
 {
-    res.render("User/login");
+    res.render("user/login");
 });
 
 router.post("/login",(req,res)=>
@@ -62,9 +68,9 @@ router.post("/login",(req,res)=>
 
         if(user==null)
         {
-            errors.push("Sorr your email was not found in our database")
+            errors.push("Sorry your email was not found in our database")
 
-            res.render("User/login",{
+            res.render("user/login",{
                 errors
             })
         }
@@ -106,7 +112,7 @@ router.post("/login",(req,res)=>
 router.get("/profile/",(req,res)=>{
 
 
-    res.render("User/userDashboard");
+    res.render("user/userDashboard");
     
 })
 
