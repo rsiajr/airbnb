@@ -41,20 +41,17 @@ router.post("/reg",(req,res)=>
                 profilePic: req.files.profilePic.name
             })
             .then(()=>{
-                res.redirect(`/user/userdashboard/${user._id}`)
+                res.redirect(`/user/profile/${user._id}`)
             })
 
-        })
-      
-      
+        })    
        
     })
     .catch(err=>console.log(`Error while inserting into the data ${err}`));
  
 });
 
-router.get("/userdashboard/",(req,res)=>{
-
+router.get("/profile/",(req,res)=>{
 
     res.render("user/userdashboard");
     
