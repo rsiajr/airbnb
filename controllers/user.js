@@ -4,6 +4,7 @@ const userModel = require("../models/User");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 
+
 router.get('/reg', function (req, res) { 
 
     res.render('user/reg',{
@@ -14,7 +15,6 @@ router.get('/reg', function (req, res) {
     });  
 
 }); 
-
 
 router.post("/reg",(req,res)=>
 { 
@@ -41,7 +41,7 @@ router.post("/reg",(req,res)=>
                 profilePic: req.files.profilePic.name
             })
             .then(()=>{
-                res.redirect(`/user/profile/${user._id}`)
+                res.redirect(`/user/userdashboard/${user._id}`)
             })
 
         })
@@ -53,66 +53,10 @@ router.post("/reg",(req,res)=>
  
 });
 
-router.get("/login",(req,res)=>
-{
-    res.render("user/login");
-});
-
-router.post("/login",(req,res)=>
-{
-    
-    const errors=[];
-
-    userModel.findOne({email:req.body.email})
-    .then((user)=>{
-
-        if(user==null)
-        {
-            errors.push("Sorry your email was not found in our database")
-
-            res.render("user/login",{
-                errors
-            })
-        }
-
-        else
-        {
-            bcrypt.compare(req.body.password,user.password)
-            .then((isMatched)=>{
-
-                if(isMatched==true)
-                {
-                   req.session.user= user;
-
-                   res.redirect("/user/profile")
-                }
-
-                else
-                {
-                    errors.push("Sorry your password was wrong!")
-
-                    res.render("User/login",{
-                      errors
-                    })
-                }
-
-            })
-            .catch(err=>console.log(`Error ${err}`));
-
-        }
+router.get("/userdashboard/",(req,res)=>{
 
 
-    })
-    .catch(err=>console.log(`Error ${err}`));
-
-});
-
-
-
-router.get("/profile/",(req,res)=>{
-
-
-    res.render("user/userDashboard");
+    res.render("user/userdashboard");
     
 })
 

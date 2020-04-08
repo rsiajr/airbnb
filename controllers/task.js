@@ -1,10 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const fileUpload = require('express-fileupload');
+const session = require('express-session');
 const taskModel = require("../models/Task");
 
 router.get("/loginwelc",(req,res)=>
 {
-    res.render("general/loginwelc",{
+    res.render("user/loginwelc",{
 
         title: "Login Welcome Page",
         headingInfo : "Login Welcome Page",
@@ -22,7 +26,7 @@ router.post("/loginwelc", (req,res) => {
     const task = new taskModel(newUser);
     task.save()
     .then(()=>{
-        res.redirect("products/dashboard");
+        res.redirect("/task/dashboard");
     })
     .catch(err=>console.log(`Error occurred when inserting in the database: ${err}`))
 

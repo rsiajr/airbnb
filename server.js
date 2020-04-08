@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
-const session = require('express-session')
+const session = require('express-session');
 
 require('dotenv').config({path:"./config/keys.env"});
 

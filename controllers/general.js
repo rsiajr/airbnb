@@ -66,16 +66,16 @@ router.get('/welcome', function (req, res) {
 
 // Welcome Page
 
-router.get('/loginwelc', function (req, res) { 
+// router.get('/loginwelc', function (req, res) { 
 
-  res.render('general/loginwelc',{
+//   res.render('general/loginwelc',{
 
-      title: "Login Welcome Page",
-      headingInfo : "Login Welcome Page"
+//       title: "Login Welcome Page",
+//       headingInfo : "Login Welcome Page"
 
-  });  
+//   });  
 
-}); 
+// }); 
 
 
 // Registration Page: Username and Password validation
@@ -178,33 +178,25 @@ else if(errorsReg.length == 0)
 }
 });
 
+router.get("/login",(req,res)=>
+{
+    res.render("general/login");
 
-router.get('/login', function (req, res) { 
+});
 
-    res.render('general/login',{
-
-        title: "Login",
-        headingInfo : "Login Page"
-
-    }); 
-
-}); 
-
-// Login Page: Username and Password validation
-
-router.post("/login",(req,res)=>{
+router.post("/general/login",(req,res)=>{
 
   const errors= [];
 
 if(req.body.email=="")
 {
-  errors.push("You need to enter an EMAIL ADDRESS before you can sign in");
+  errors.push("You need to enter an EMAIL ADDRESS before you can sign in")
 
 }
 
 if(validator.validate(req.body.email) == false)
 {
-  errors.push("You need to enter a valid EMAIL ADDRESS.");
+  errors.push("You need to enter a valid EMAIL ADDRESS.")
 
 }
 
@@ -215,21 +207,30 @@ if(req.body.password=="")
 
 if(errors.length > 0)
 {
-  res.render("general/login",{
+  res.render("/login",{
     messages : errors
-  })
+  });
 }
 
 else(errors.length == 0)
 {
-  res.render('general/loginwelc',{
-
-    title: "Login Welcome Page",
-    headingInfo : "Login Welcome Page",
-
-  })  
+  res.redirect("/task/loginwelc");  
 }
 
 });
+
+// router.get('/login', function (req, res) { 
+
+//     res.render('general/login',{
+
+//         title: "Login",
+//         headingInfo : "Login Page"
+
+//     }); 
+
+// }); 
+
+// Login Page: Username and Password validation
+
 
 module.exports = router;
