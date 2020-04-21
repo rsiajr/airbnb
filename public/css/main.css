@@ -47,6 +47,13 @@ header {
     border-radius: 6em;
 }
 
+.profPic{
+    margin: 0 25%;
+    padding-top: 1%;
+    font-size: 1.5rem;
+
+}
+
 .nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
