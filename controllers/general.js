@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const passwordValidator = require('password-validator');
 const validator = require("email-validator");
+const userModel = require("../models/User");
+const path = require("path");
+const bcrypt = require("bcryptjs");
+
 
 
 //Schema for password-validator
@@ -180,7 +184,48 @@ else if(errorsReg.length == 0)
 
 router.get("/login",(req,res)=>
 {
-    res.render("general/login");
+
+  userModel.findOne({email:req.body.email})
+  .then(user=>{
+
+      const errors= [];
+
+      if(user==null)
+      {
+          errors.push("Sorry, your email and/or password incorrect");
+          res.render("User/login",{
+              errors
+          })
+              
+      }
+
+      else
+      {
+          bcrypt.compare(req.body.password, user.password)
+          .then(isMatched=>{
+              
+              if(isMatched)
+              {
+                  req.session.userInfo = user;
+                 
+                  res.redirect("/user/profile");
+              }
+
+              else
+              {
+                  errors.push("Sorry, your email and/or password incorrect ");
+                  res.render("General/login",{
+                      errors
+                  })
+              }
+
+          })
+          .catch(err=>console.log(`Error ${err}`));
+      }
+
+
+  })
+  .catch(err=>console.log(`Error ${err}`));
 
 });
 
