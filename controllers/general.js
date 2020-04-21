@@ -5,7 +5,8 @@ const validator = require("email-validator");
 const userModel = require("../models/User");
 const path = require("path");
 const bcrypt = require("bcryptjs");
-
+const isAuthenticated = require("../middleware/auth");
+const dashBoardLoader = require("../middleware/authorization");
 
 
 //Schema for password-validator
@@ -193,7 +194,7 @@ router.get("/login",(req,res)=>
       if(user==null)
       {
           errors.push("Sorry, your email and/or password incorrect");
-          res.render("User/login",{
+          res.render("general/login",{
               errors
           })
               
@@ -208,13 +209,13 @@ router.get("/login",(req,res)=>
               {
                   req.session.userInfo = user;
                  
-                  res.redirect("/user/profile");
+                  res.redirect("/user/userdashboard");
               }
 
               else
               {
                   errors.push("Sorry, your email and/or password incorrect ");
-                  res.render("General/login",{
+                  res.render("general/login",{
                       errors
                   })
               }
@@ -228,6 +229,15 @@ router.get("/login",(req,res)=>
   .catch(err=>console.log(`Error ${err}`));
 
 });
+
+router.get("/profile",isAuthenticated,dashBoardLoader);
+
+router.get("/logout",(req,res)=>{
+
+    req.session.destroy();
+    res.redirect("/general/login")
+    
+})
 
 router.post("/general/login",(req,res)=>{
 

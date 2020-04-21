@@ -41,7 +41,7 @@ router.post("/reg",(req,res)=>
                 profilePic: req.files.profilePic.name
             })
             .then(()=>{
-                res.redirect(`/user/profile/${user._id}`)
+                res.redirect(`/welcome/${user._id}`)
             })
 
         })    
@@ -53,14 +53,14 @@ router.post("/reg",(req,res)=>
 
 router.get("/profile/",(req,res)=>{
 
-    res.render("user/userdashboard");
+    res.render("general/welcome");
     
 })
 
 router.get("/logout",(req,res)=>{
 
     req.session.destroy();
-    res.redirect("/user/login")
+    res.redirect("/general/login")
 });
 
 
